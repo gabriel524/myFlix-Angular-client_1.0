@@ -8,7 +8,7 @@ const apiUrl = "https://myflix--movies-application1.herokuapp.com/";
 @Injectable({
   providedIn: "root",
 })
-export class UserRegistrationService {
+export class FetchApiDataService {
   constructor(private http: HttpClient) {}
 
   userRegistration(userDetails: any): Observable<any> {
