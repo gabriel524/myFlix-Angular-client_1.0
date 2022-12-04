@@ -1,0 +1,12 @@
+:host {
+    .sign-in {
+        &-header {
+            margin-bottom: 1rem;
+        }
+
+        &-actions {
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+}
