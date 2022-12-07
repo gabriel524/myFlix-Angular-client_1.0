@@ -1,29 +1,27 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog'; // Close dialog on success
-import { FetchApiDataService } from '../fetch-api-data.service'; // API
-import { MatSnackBar } from '@angular/material/snack-bar'; // Notifications
+import { Component, OnInit, Input } from "@angular/core";
+import { MatDialogRef } from "@angular/material/dialog";
+import { FetchApiDataService } from "../fetch-api-data.service";
+import { MatSnackBar } from "@angular/material/snack-bar";
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-user-login-form',
-  templateUrl: './user-login-form.component.html',
-  styleUrls: ['./user-login-form.component.css']
+  selector: "app-user-login-form",
+  templateUrl: "./user-login-form.component.html",
+  styleUrls: ["./user-login-form.component.scss"],
 })
-export class UserLoginFormComponent implements OnInit{
-  @Input() userData = { Username: '', Password: '' };
+export class UserLoginFormComponent implements OnInit {
+  @Input() userData = { Username: "", Password: "" };
+
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
     public snackBar: MatSnackBar,
     private router: Router,
   ) {}
-
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   // This is the function responsible for sending the form inputs to the backend
-  loginUser(): void {
+  logInUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {
         console.log(result);
@@ -31,7 +29,7 @@ export class UserLoginFormComponent implements OnInit{
         localStorage.setItem('token', result.token);
         this.dialogRef.close(); // This will close the modal on success!
         this.snackBar.open(result, 'Login successful', {
-          duration: 20,
+          duration: 2000,
         });
         // alert('Login successful');
         this.router.navigate(['movies'])
@@ -45,4 +43,6 @@ export class UserLoginFormComponent implements OnInit{
     );
   }
 }
+
+
 
