@@ -84,9 +84,9 @@ isFav(id: string): boolean {
 }
 
 //adds movie to favorites
-addFavorite(id: string): void {
+addFavoriteMovie(id: string): void {
   console.log(id);
-  this.fetchApiData.addFavorite(id).subscribe((result) => {
+  this.fetchApiData.addFavoriteMovie(id).subscribe((result) => {
     console.log(result);
     this.snackBar.open('Movie has been added to your favorites!', 'OK', {
       duration: 2000,
@@ -95,16 +95,15 @@ addFavorite(id: string): void {
   });
 }
 
-deleteFavorite(id: string): void {
-  console.log(id);
-  this.fetchApiData.deleteFavorite(id).subscribe((result) => {
-    console.log(result);
-    this.snackBar.open('Movie has been removed from your favorites!', 'OK', {
-      duration: 2000,
+removeFromFavorites(id: string): void {
+    console.log(id);
+    this.fetchApiData.removeFavoriteMovie(id).subscribe((result) => {
+      console.log(result);
+      this.snackBar.open('Movie removed from favorites', 'OK', {
+        duration: 2000,
+      });
+      this.ngOnInit();
     });
-    this.ngOnInit();
-  });
-}
+  }
 
 }
-

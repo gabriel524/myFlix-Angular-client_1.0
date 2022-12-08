@@ -1,39 +1,38 @@
-
-
 $bgColor: #af0624;
 $text: #fff;
 $boxColor: #000;
 $secondColor: #8d4c4c;
 
-.WelcomePageComponent {
+.profile-page {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 40px 16 45;
-    background-color: rgb(179, 104, 13);
+    padding: 30px 40px;
+    background-color: $bgColor;
     box-sizing: border-box;
     border-style: solid;
     border-color: $boxColor;
     border-width: 5px;
 }
 
-.welcome-card {
+.profile-card {
     max-width: 400px;
     margin: auto;
-    border-style: solid;
-    padding: 50px;
+    padding: 25px;
     background-color: $secondColor;
+    border-style: solid;
+    border-color: $boxColor;
     border-width: 5px;
-    border-color:#ff00ee rgb(255, 12, 166)hwb(184 22% 1%) orangered;
 }
 
-.welcome-header {
+.profile-header {
     display: flex;
     justify-content: center;
     color: $text;
 }
 
-.register {
+.edit {
     background-color: $boxColor;
+    color: $text;
 }
