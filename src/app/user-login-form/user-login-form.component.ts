@@ -32,7 +32,7 @@ export class UserLoginFormComponent implements OnInit {
           duration: 2000,
         });
         // alert('Login successful');
-        this.router.navigate(['movies'])
+        this.router.navigate(['movies']);
       },
       (err) => {
         console.log("Error while login", err)
