@@ -4,9 +4,9 @@
     display: flex;
 }
 
-$bgColor: #af0624;
+$bgColor: hsl(190, 93%, 35%);
 $text: #fff;
-$boxColor: #000;
+$boxColor: rgb(10, 56, 96);
 $secondColor: #8d4c4c;
 
 .movie-page {
@@ -34,11 +34,12 @@ $secondColor: #8d4c4c;
     border-style: solid;
     border-color: $boxColor;
     border-width: 5px;
-    background-color: $secondColor;
+    background-color: burlywood;
     max-width: 320px;
     width: 320px;
     margin: 15px;
     padding: 20px 5px;
+    box-shadow: 0.5px 0.5px 10px rgb(22 2 94);
 }
 
 .mat-card-header {
@@ -53,6 +54,7 @@ $secondColor: #8d4c4c;
     max-width: 230px;
     justify-content: center;
     text-align: center;
+    color: solid balck;
 }
 
 img {
@@ -64,11 +66,11 @@ img {
 .mat-card-actions {
     padding-top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    padding: 22px;
 }
 
 .movie-button {
-    background-color: $boxColor;
+    background-color: brown;
     color: $text;
 }
 
