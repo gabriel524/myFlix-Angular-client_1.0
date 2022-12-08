@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service'
->>>>>>> myflix-angular-client-6.4
 
 @Component({
   selector: 'app-movie-card',
@@ -11,10 +7,6 @@ import { FetchApiDataService } from '../fetch-api-data.service'
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent {
-<<<<<<< HEAD
-
-}
-=======
   movies: any[] = [];
   constructor(
     public fetchApiData: FetchApiDataService
@@ -32,4 +24,3 @@ getMovies(): void {
     });
   }
 }
->>>>>>> myflix-angular-client-6.4
