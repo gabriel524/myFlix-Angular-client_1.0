@@ -1,9 +1,10 @@
 <p class="title">All Movies View!</p>
-<mat-card *ngFor="let movie of movies; let i=index;">
-    <mat-dialog-content>
+<div class="movie-page" style="display: flex;">
+    <mat-card class="movie-card" *ngFor="let movie of movies;" style="flex: 1 1 auto;">
+        <mat-card-header>
         <mat-card-title>{{movie.Title}}</mat-card-title>
-        <mat-card-subtitle>
-            <img src="https://myflix--movies-application1.herokuapp.com/" 
-            alt= "{{movie.ImagePath}}"/></mat-card-subtitle>
-    </mat-dialog-content>
-</mat-card>
+        </mat-card-header>
+        <img src={{movie.Imagepath}}
+        alt= "{{movie.Title}}" />
+        <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
+       <mat-card-actions>
