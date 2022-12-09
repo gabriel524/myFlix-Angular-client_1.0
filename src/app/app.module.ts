@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +19,6 @@ import { UserLoginFormComponent } from './user-login-form/user-login-form.compon
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
-import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { DirectorComponent } from './director/director.component';
@@ -29,7 +29,8 @@ import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
-  { path: 'movies', component: MovieCardComponent },
+  { path: 'movies', component: MovieCardComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -60,7 +61,7 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    MatIconModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
